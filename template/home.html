@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="css/icons.css" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="css/materialize.min.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <style>
+    header, .socialcodia, footer {
+    padding-left: 300px;
+    padding-right:1px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, .socialcodia, footer {
+      padding-left: 0;
+    }
+  }
+</style>
+  <body class=" blue lighten-5">
+    
+    <div class="navbar-fixed">
+        <nav class="white darken-1">
+                <a href="home" class="brand-logo blue-text hide-on-med-and-down" style="margin-left:35px">SocialCodia</a>
+                <div class="row">
+                    <div class="col s1 m4 l3">
+                        <ul class="left">
+                            <li>     
+                                <a href="#" class="sidenav-trigger" data-target="slide-out" style="margin:0px"><i class="material-icons black-text"><img src="src/icons/menu.png" width="25" alt=""></i></a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col s12 m4 l5 hide-on-med-and-down">
+                            <div class="input-field" >
+                                <input class="blue lighten-5" style="border-radius: 30px; padding-left: 50px; height:40px; width:100%" type="text" name="search" id="search" placeholder="Search">
+                                <i class="material-icons red-text prefix right">search</i>
+                            </div>
+                    </div>
+                    
+                    <div class="col s11 m4 l4">
+                        <ul class="right">
+                            <div class="row" style="margin-bottom:0px">
+                                <div class="col s12">
+                                    <div class="col s3 l2 ">
+                                        <li><a href="home"><i class="material-icons large tooltipped" data-position="bottom" data-tooltip="Home"><img src="../src/icons/home.png" width="25" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l2">
+                                        <li><a href="#"><i class="material-icons large tooltipped" data-position="bottom" data-tooltip="Message"><img src="../src/icons/chat.png" width="25" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l2">
+                                        <li><a href="#" class=" tooltipped" data-position="bottom" data-tooltip="Notification"><i class="material-icons large "><img src="../src/icons/bell.svg" width="25" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l2">
+                                        <li><a href="" class="dropdown-trigger" data-target="profileMoreDropdown" data-tooltip="Profile"><i class="material-icons large "><img src="../img/user.png" class="circle"  width="30" style=" border: 1px solid blue;" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l4">
+                                        <!-- <li><a href="profile"><img src="<?php  echo $_SESSION['image']; ?>" width="25" alt="" data-position="bottom" data-tooltip="Profile" style=" border: 1px solid blue; margin-top:10px" class="responsive-img circle tooltipped"></a></li> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    
+      </div>
+      <ul class="collection dropdown-content" id="profileMoreDropdown" style="width:300px">
+            <li class="collection-item avatar">
+                <a href="profile">
+                <img src="<?php echo $_SESSION['image']; ?>" alt="" class="circle">
+                    <span class="title"><?php echo $_SESSION['name']; ?></span>
+                    <p style="font-size:12px">See your profile</p>
+                </a>
+            </li>
+            <li><a href="home"><i class="material-icons"><img src="src/icons/home.png" width="25" alt=""></i> My Account</a></li>
+            <li><a href=""><i class="material-icons">settings</i> Account Setting</a></li>
+            <li><a href="logout"><i class="material-icons">power_settings_new</i> Logout</a></li>
+        </ul>
+
+    <div class="socialcodia">
+        <div class="row">
+            <!-- *********************************Main Row offset 1 on both side, total row size is 10**************************************** -->
+            <div class="col l12" style="padding:0px">
+
+                <!-- ***************************Left Side Row************************* -->
+                <div class="col l1"></div>
+                <!-- *****************************Middle Row For Post Content************************ -->
+                <div class="col l7 m8 s12">
+                        <!-- ********************Add Feed Card Design***************** -->
+                        <div class="card">
+                            <div class="row">
+                                <div class="col s12 l12 m12">
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        <div class="card-content" style="padding: 5px;">
+                                            <div class="row" style="margin-bottom: 0px;">
+                                                <div class="col s3 m3 l2 center" style="margin-top: 10px;">
+                                                    <img src="../img/user.png" height="100" width="55" class="responsive-img circle" style=" border: 2px solid blue; margin-top: 5px;" alt="">
+                                                </div>
+                                                <div class="col s9 m9 l10" style="margin-left: -20px; margin-bottom: -5px;">
+                                                    <div class="input-field" style="margin-bottom: -8px;">
+                                                        <textarea name="content" id="" cols="30" rows="10" maxlength="1000" style="max-height: 250px; min-height: 90px;" class="materialize-textarea" placeholder="What's on your mind?" style="height: 100px;"></textarea>
+                                                    </div>
+                                                    <img src="" class="hoverable"  alt="" id="feedImage" style="width:100px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-action" style="padding: 8px;">
+                                            <div class="row" style="margin: 0px;">
+                                                <input id="image" type="file" onchange="readURL(this);" name="image" class="hide"/>
+                                                <label for="image"><i class="material-icons prefix left" style="font-size: 30px; padding-left: 20px;">camera_alt</i></label>
+                                                <input type="submit" class="btn red right z-depth-0" style="border-radius: 20px; height: 40px; width: 105px; margin-right: 20px;" name="postFeed" value="Post" id="postFeed">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- **************************Feed Data Will Show Into This Card********************** -->
+                        <?php
+                            foreach($feedsCard as $feed)
+                            {
+                                echo $feed;
+                            }
+                        ?>
+                </div>
+
+                <!-- ****************************************Right Row*********************************** -->
+                <div class="col l4 m4 s12">
+                    <div class="card z-depth-0">
+                        <div class="card-header" style="padding: 20px;">
+                            <b>Stories</b>
+                            <i class="material-icons right">more_vert</i>
+                        </div>
+                        <div class="divider"></div>
+                        <!-- **********************For User to add story*************************** -->
+                        <!-- <div class="stories-row" style="padding: 10px;"> -->
+                            <div class="row" style="margin: 0px; padding: 5px;">
+                                <div class="col s3 m3 l3 center">
+                                    <img src="src/img/mufazmi.jpg" style="border: 2px solid red; min-width: 40px;" width="50" alt="" class="responsive-img circle">
+                                </div>
+                                <div class="col s9 m9 l16">
+                                    <p style="font-weight: bold; margin-top: 6px;">Add a new story</p>
+                                    <p style="margin-top: -20px; font-size: small;">Yesterday at 9:32pm</p>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                        <!-- **********************END For User to add story*************************** -->
+                        <div class="divider"></div>
+                        <!-- <div class="stories-row" style="padding: 10px;"> -->
+                            <div class="row" style="margin: 0px; padding: 5px;">
+                                <div class="col s3 m3 l3 center">
+                                    <img src="src/img/mufazmi.jpg" style="border: 2px solid red; min-width: 40px;" width="50" alt="" class="responsive-img circle">
+                                </div>
+                                <div class="col s9 m9 l16">
+                                    <p style="font-weight: bold; margin-top: 6px;">Add a new story</p>
+                                    <p style="margin-top: -20px; font-size: small;">Yesterday at 9:32pm</p>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul id="slide-out" class="sidenav collapsible sidenav-fixed" style="transform: translateX(0%); top:65px;">
+        <!-- <li class="user-view">
+            <div class="background">
+                <img src="../images/sms_bg.jpg" class="responsive-img" alt="">
+            </div>
+            <a href="profile.php">
+            <img src="../img/mufazmi.png" alt="" class="responsive-img circle">
+            </a>
+            <span class="name white-text">Umair Farooqui</span>
+            <span class="email white-text">info.mufazmi@gmail.com</span>
+        </li> -->
+        <li><a href="home.html"><i class="material-icons"><img src="../src/icons/home.png" width="25" alt=""></i> Feed</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/chat.png" width="25" alt=""></i> Chats</a></li>
+        <li><a href="friends.html"><i class="material-icons"><img src="../src/icons/friends.png" width="25" alt=""></i> Friends</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/flag.png" width="25" alt=""></i> Page</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/photo.png" width="25" alt=""></i> Gallery</a></li>
+        <li><a href="videos.html"><i class="material-icons"><img src="../src/icons/video.png" width="25" alt=""></i> Video</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/group.png" width="25" alt=""></i> Groups</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/chat.png" width="25" alt=""></i> Groups</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/chat.png" width="25" alt=""></i> Groups</a></li>
+        <div class="divider"></div>
+        <li><a href="../include/students/logout.php"><i class="material-icons">logout</i>Logout</a></li>
+        <li><a href="about.php"><i class="material-icons">info</i>About Us</a></li>
+    </ul>
+    
+  </body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="js/materialize.min.js"></script>
+</html>

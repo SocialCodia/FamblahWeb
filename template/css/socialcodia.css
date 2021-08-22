@@ -1,0 +1,13 @@
+.tabs .tab a{
+    color:blue;
+} /*Black color to the text*/
+
+
+.tabs .tab a.active {
+    background-color: rgb(110, 4, 248);
+    color:#ffffff;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    background-color:rgb(30, 49, 158);
+} 
