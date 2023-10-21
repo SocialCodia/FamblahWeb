@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="css/materialize.min.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <style>
+    header, .socialcodia, footer {
+    padding-left: 300px;
+    padding-right:1px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, .socialcodia, footer {
+      padding-left: 0;
+    }
+  }
+</style>
+  <body class=" blue lighten-5" style="font-family: Rajdhani,sans-serif;">
+    
+    <div class="navbar-fixed">
+        <nav class="white darken-1">
+                <a href="home" class="brand-logo blue-text hide-on-med-and-down" style="margin-left:35px">SocialCodia</a>
+                <div class="row">
+                    <div class="col s1 m4 l3">
+                        <ul class="left">
+                            <li>     
+                                <a href="#" class="sidenav-trigger" data-target="slide-out" style="margin:0px"><i class="material-icons black-text"><img src="src/icons/menu.png" width="25" alt=""></i></a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col s12 m4 l5 hide-on-med-and-down">
+                            <div class="input-field" >
+                                <input class="blue lighten-5" style="border-radius: 30px; padding-left: 50px; height:40px; width:100%" type="text" name="search" id="search" placeholder="Search">
+                                <i class="material-icons red-text prefix right">search</i>
+                            </div>
+                    </div>
+                    
+                    <div class="col s11 m4 l4">
+                        <ul class="right">
+                            <div class="row" style="margin-bottom:0px">
+                                <div class="col s12">
+                                    <div class="col s3 l2 ">
+                                        <li><a href="home"><i class="material-icons large tooltipped" data-position="bottom" data-tooltip="Home"><img src="../src/icons/home.png" width="25" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l2">
+                                        <li><a href="#"><i class="material-icons large tooltipped" data-position="bottom" data-tooltip="Message"><img src="../src/icons/chat.png" width="25" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l2">
+                                        <li><a href="#" class=" tooltipped" data-position="bottom" data-tooltip="Notification"><i class="material-icons large "><img src="../src/icons/bell.svg" width="25" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l2">
+                                        <li><a href="" class="dropdown-trigger" data-target="profileMoreDropdown" data-tooltip="Profile"><i class="material-icons large "><img src="../img/user.png" class="circle"  width="30" style=" border: 1px solid blue;" alt=""></i></a></li>
+                                    </div>
+                                    <div class="col s3 l4">
+                                        <!-- <li><a href="profile"><img src="<?php  echo $_SESSION['image']; ?>" width="25" alt="" data-position="bottom" data-tooltip="Profile" style=" border: 1px solid blue; margin-top:10px" class="responsive-img circle tooltipped"></a></li> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    
+      </div>
+      <ul class="collection dropdown-content" id="profileMoreDropdown" style="width:300px">
+            <li class="collection-item avatar">
+                <a href="profile">
+                <img src="<?php echo $_SESSION['image']; ?>" alt="" class="circle">
+                    <span class="title"><?php echo $_SESSION['name']; ?></span>
+                    <p style="font-size:12px">See your profile</p>
+                </a>
+            </li>
+            <li><a href="home"><i class="material-icons"><img src="src/icons/home.png" width="25" alt=""></i> My Account</a></li>
+            <li><a href=""><i class="material-icons">settings</i> Account Setting</a></li>
+            <li><a href="logout"><i class="material-icons">power_settings_new</i> Logout</a></li>
+        </ul>
+
+        <div class="socialcodia" >
+            <div class="row">
+                <!-- *********************************Main Row offset 1 on both side, total row size is 10**************************************** -->
+                <div class="col l12" style="padding:0px">
+                    <div class="card-mufazmi center-align">
+                        <img src="../src/img/bg.jpg" class="responsive-img" style="height: 340px; width: 100%; object-fit:cover;" alt="">
+
+                        <div class="card" style="margin-top: -8px;">
+                            <div class="row" style="margin: 0px;">
+                                <div class="col l4 s12" style="font-weight: bold;">
+                                    <div class="col s4 m4 l4">
+                                        <p style="font-size: 25px; margin-bottom: 0px;">999</p>
+                                        <p style="font-size: 15px; color: #3e3f5e; margin-top: 0px;">Feeds</p>
+                                    </div>
+                                    <div class="col s4 m4 l4">
+                                        <p style="font-size: 25px; margin-bottom: 0px;">999</p>
+                                        <p style="font-size: 15px; color: #3e3f5e; margin-top: 0px;">Friends</p>
+                                    </div>
+                                    <div class="col s4 m4 l4">
+                                        <p style="font-size: 25px; margin-bottom: 0px;">999</p>
+                                        <p style="font-size: 15px; color: #3e3f5e; margin-top: 0px;">999</p>
+                                    </div>
+                                </div>
+
+                                <div class="col s12 m12 l4">
+                                    <img src="src/img/azmi.jpg"  alt="" style="width:160px; margin-top: -110px; border: 6px solid white;" class="responsive-img circle z-depth-0">
+                                    <h5 style="font-weight: bold; margin-top:0px; margin-bottom: 0px;"> Umair Farooqui</h5>
+                                    <p style="margin-top: 0px;"><b>@mufazmi</b></p>
+                                </div>
+
+                                <div class="col l4 s12" style="font-weight: bold; margin-top: 25px;">
+                                    <div class="col s6 m6 l6">
+                                        <input type="submit" class="btn blue lighten-2" style="font-family:Rajdhani,sans-serif ;  font-weight: bold; border-radius: 10px; height: 45px; line-height: 45px;" name="btnAddFriend" id="btnAddFriend" value="Add Friend +">
+                                    </div>
+                                    <div class="col s6 m6 l6">
+                                        <a href="" style="border-radius: 10px; text-align: center; height: 45px; line-height: 45px;" class="btn grey">Message</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="divider"> </div>
+                    
+                    <div class=" col l1"></div>
+    
+                    <!-- *****************************Middle Row For Post Content************************ -->
+                    <div class="col l7 m10 offset-m1 s12">
+                            <!-- ********************Add Feed Card Design***************** -->
+                            <div class="card z-depth-0">
+                                <div class="row">
+                                    <div class="col s12 l12 m12">
+                                        <form action="" enctype="multipart/form-data" method="post">
+                                            <div class="card-content" style="padding: 5px;">
+                                                <div class="row" style="margin-bottom: 0px;">
+                                                    <div class="col s3 m3 l2 center" style="margin-top: 10px;">
+                                                        <img src="../img/user.png" height="100" width="55" class="responsive-img circle" style=" border: 2px solid blue; margin-top: 5px;" alt="">
+                                                    </div>
+                                                    <div class="col s9 m9 l10" style="margin-left: -20px; margin-bottom: -5px;">
+                                                        <div class="input-field" style="margin-bottom: -8px;">
+                                                            <textarea name="content" id="" cols="30" rows="10" maxlength="1000" style="max-height: 20px; min-height: 90px;" class="materialize-textarea" placeholder="What's on your mind?" style="height: 100px;"></textarea>
+                                                        </div>
+                                                        <img src="" class="hoverable"  alt="" id="feedImage" style="width:100px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-action" style="padding: 8px;">
+                                            <div class="row" style="margin: 0px;">
+                                                    <input id="image" type="file" onchange="readURL(this);" name="image" class="hide"/>
+                                                    <label for="image"><i class="material-icons prefix left" style="font-size: 30px; padding-left: 20px;">camera_alt</i></label>
+                                                    <input type="submit" class="btn red right z-depth-0" style="border-radius: 20px; height: 40px; width: 105px; margin-right: 20px;" name="postFeed" value="Post" id="postFeed">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- **************************Feed Data Will Show Into This Card********************** -->
+                            <?php
+                                if(!empty($feedsCard))
+                                {
+                                    foreach($feedsCard as $feed)
+                                    {
+                                        echo $feed;
+                                    }
+                                }
+                                else
+                                {
+                                    echo "<h1>No User Found</h1>";
+                                
+                                }
+                            ?>
+                    </div>
+    
+                    <!-- *************************************Right Row*********************************** -->
+                    <div class="col l4 m4 s12 hide-on-med-and-down">
+                        <div class=" center-align" style="margin-top: 0px;">
+                                <div class="row">
+                                    <div class="col s6 m6">
+                                        <h5 style="font-weight: bold;">55</h5>
+                                        <b class="grey-text">Followings</b>
+                                    </div>
+                                    <div class="col s6 m6">
+                                        <h5 style="font-weight: bold;">65</h5>
+                                        <b class="grey-text">Followers</b>
+                                    </div>
+                                </div>
+                        </div>
+    
+                        <!-- ******************Designing About Section******************** -->
+    
+                        <div class="card z-depth-0 red lighten-2">
+                            <div class="card-title center">
+                                About me!
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est voluptates provident veritatis impedit error accusantium molestias placeat aliquam soluta.</p>
+                            </div>
+                        </div>
+    
+                        <!-- *****************Desgining All User Posted Images*********************** -->
+                        
+                        <div class="card z-depth-0">
+                            <div class="card-title center" >
+                                <span>Images</span>
+                            </div>
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>                                <div class="col s4 m4 l4">
+                                        <img src="src/img/mufazmi.jpg" alt="" class="responsive-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+    <ul id="slide-out" class=" hide sidenav collapsible sidenav-fixed" style="transform: translateX(0%); top:65px;">
+        <!-- <li class="user-view">
+            <div class="background">
+                <img src="../images/sms_bg.jpg" class="responsive-img" alt="">
+            </div>
+            <a href="profile.php">
+            <img src="../img/mufazmi.png" alt="" class="responsive-img circle">
+            </a>
+            <span class="name white-text">Umair Farooqui</span>
+            <span class="email white-text">info.mufazmi@gmail.com</span>
+        </li> -->
+        <li><a href="home.html"><i class="material-icons"><img src="../src/icons/home.png" width="25" alt=""></i> Feed</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/chat.png" width="25" alt=""></i> Chats</a></li>
+        <li><a href="friends.html"><i class="material-icons"><img src="../src/icons/friends.png" width="25" alt=""></i> Friends</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/flag.png" width="25" alt=""></i> Page</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/photo.png" width="25" alt=""></i> Gallery</a></li>
+        <li><a href="videos.html"><i class="material-icons"><img src="../src/icons/video.png" width="25" alt=""></i> Video</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/group.png" width="25" alt=""></i> Groups</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/chat.png" width="25" alt=""></i> Groups</a></li>
+        <li><a href=""><i class="material-icons"><img src="../src/icons/chat.png" width="25" alt=""></i> Groups</a></li>
+        <div class="divider"></div>
+        <li><a href="../include/students/logout.php"><i class="material-icons">logout</i>Logout</a></li>
+        <li><a href="about.php"><i class="material-icons">info</i>About Us</a></li>
+    </ul>
+
+  </body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="js/materialize.min.js"></script>
+</html>

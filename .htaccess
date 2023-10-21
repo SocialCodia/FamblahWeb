@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteRule ^login?$ index.php
+RewriteRule ^forgotPassword?$ forgotPassword.php
+RewriteRule ^register?$ register.php
+RewriteRule ^home?$ home.php
+RewriteRule ^editProfile?$ editProfile.php
+RewriteRule ^resetPassword?$ resetPassword.php
+RewriteRule ^logout?$ include/logout.php
+RewriteRule ^friends?$ friends.php
+RewriteRule ^notifications?$ notifications.php
+RewriteRule ^images?$ images.php
+RewriteRule ^books?$ books.php
+RewriteRule ^marketplace?$ marketplace.php
+RewriteRule ^feed?$ feed.php
+RewriteRule ^feed/([0-9]+) feed.php?feedId=$1
+RewriteRule ^blogs?$ blogs.php
+RewriteRule ^pages?$ pages.php
+RewriteRule ^users?$ users.php
+RewriteRule ^groups?$ groups.php
+RewriteRule ^chats?$ chats.php
+RewriteRule ^watch?$ video.php
+RewriteRule ^videos?$ videos.php
+RewriteRule ^contact?$ contact.php
+RewriteRule ^about?$ about.php
+RewriteRule ^watch/([a-zA-Z0-9]+) video.php?v=$1
+ReWriteRule ^([a-zA-Z0-9]+)$ profile.php?u=$1
